@@ -174,7 +174,10 @@
         </div>
     </section>
     <section class="image__texte__section image__texte__section--image--full-width">
-        <img src="./dist/images/fundo_rei_leao.png" alt="Imagem com TV, Computador, Tablet e Celular">
+        <picture>
+            <source media="(max-width: 768px)" srcset="./dist/images/fundo_rei_leao_celular.png" />
+            <img src="./dist/images/fundo_rei_leao.png" alt="Rei Leão">
+        </picture>
         <div class="image__texte__section__text__container image__texte__section--image--full-width__text__container">
             <h2 class="title">
                 Baixe filmes e séries
@@ -235,7 +238,7 @@
         <h2 class="title">Perguntas Frequentes</h2>
         <ul class="faq__questions">
             <li class="faq__questions__item">
-                <div data-faq-question class="faq__questions__item__question">
+                <div data-faq-question class="faq__questions__item__question text--faq">
                     O que esta incluso no Disney+?
                 </div>
                 <div class="faq__questions__item__answer text--big">
@@ -252,7 +255,7 @@
                 </div>
             </li>
             <li class="faq__questions__item">
-                <div data-faq-question class="faq__questions__item__question">
+                <div data-faq-question class="faq__questions__item__question text--faq">
                     Já tem o Disney+ ou o Star+ e quer o Combo+?
                 </div>
                 <div class="faq__questions__item__answer text--big">
@@ -269,7 +272,7 @@
                 </div>
             </li>
             <li class="faq__questions__item">
-                <div data-faq-question class="faq__questions__item__question">
+                <div data-faq-question class="faq__questions__item__question text--faq">
                     Quais formas de pagamento posso utilizar?
                 </div>
                 <div class="faq__questions__item__answer text--big">
@@ -278,7 +281,7 @@
                 </div>
             </li>
             <li class="faq__questions__item">
-                <div data-faq-question class="faq__questions__item__question">
+                <div data-faq-question class="faq__questions__item__question text--faq">
                     Como posso ver conteúdo com classificação indicativa até 16 e 18?
                 </div>
                 <div class="faq__questions__item__answer text--big">

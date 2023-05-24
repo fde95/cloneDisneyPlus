@@ -4,12 +4,25 @@
     h2{
         text-align: center;
         padding-bottom: 20px;
+
+        @media (max-width: 768px){
+            padding-top: 40px;
+        }
     }
 
     &__list{
         display: flex;
         justify-content: space-around;
         margin-top: 50px;
+
+        @media (max-width: 768px){
+            display: block;
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1022px){
+            display: flex;
+            flex-wrap: wrap;
+        }
         
         
         &__item{
@@ -27,6 +40,11 @@
 
             img{
                 height: 83px;
+
+                @media (max-width: 768px){
+                    width: 100%;
+                    height: auto;
+                }
             }
             p{
                 margin-bottom: 32px;

@@ -36,20 +36,36 @@ body{
     color: variaveis.$corTextoPrincipal;
 }
 .text--big{
-    @include text (18px);
+    @include text (20px);
+    @media (max-width: 768px){
+        @include text(15px);
+    }
 }
 .text{
     @include text;
+    @media (max-width: 768px){
+        @include text(14px);
+    }
 }
 .text--small{
     @include text (12px);
+    @media (max-width: 768px){
+        @include text(11px);
+    }
 }
 .link-text{
     @include text (16px);
     color: variaveis.$cortextoSecundario;
     text-decoration: underline;
 }
-
+.text--faq{
+    @include text (20px);
+    color: variaveis.$cortextoSecundario;
+    @media (max-width: 768px){
+        @include text(15px);
+        color: variaveis.$cortextoSecundario;
+    }
+}
 
 @mixin title($fontSize: 40px){
     @include text($fontSize);
@@ -57,12 +73,23 @@ body{
 }
 .title--big{
     @include title(44px);
+    @media (max-width: 768px){
+        @include title(26px);
+    }
 }
 .title{
     @include title;
+
+    @media (max-width: 768px){
+        @include title(24px);
+    }
 }
 .title--small{
-    @include title(28px)
+    @include title(28px);
+
+    @media (max-width: 768px){
+        @include title(22px);
+    }
 }
 
 
@@ -115,6 +142,10 @@ body{
     grid-template-columns: 1fr 1fr;
     align-items: center;
 
+    @media (max-width: 768px){
+        display: block;
+    }
+
     &__text__container{
         padding: 2vw;
 
@@ -144,6 +175,12 @@ body{
             display: flex;
             flex-direction: column;
             justify-content: center;
+
+            @media (max-width: 768px){
+                position: relative;
+                left: 0;
+                width: 100%;
+            }
         }
     }
 }
