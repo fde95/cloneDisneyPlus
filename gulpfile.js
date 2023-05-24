@@ -1,6 +1,13 @@
 const gulp = require('gulp'); //importando o Gulp
 const sass = require('gulp-sass')(require('sass')); //importando o Gulp-Sass e o Sass
 const imagemin = require('gulp-imagemin'); //importando o Compressor de Imagens
+const uglify = require('gulp-uglify'); //importando o Compressor do JS
+
+function scripts (){
+    return gulp.src('./src/scripts/*.js') //selecionando arquivos JS
+    .pipe(uglify()) //Minificando arquivos
+    .pipe(gulp.dest('./dist/js')) //salvando arquivos minificados
+}
 
 function styles(){ //função de compressão do arquivo SASS para CSS
     return gulp.src('./src/styles/*.scss') //acessando arquivos SASS
@@ -14,7 +21,8 @@ function images(){ //função de compressão de Imagens
         .pipe(gulp.dest('./dist/images')); //direcionando imagens comprimidas para destido
 }
 
-exports.default = gulp.parallel(styles, images);
+exports.default = gulp.parallel(styles, images, scripts);
 exports.watch = function(){ //função de monitoramento do Gulp
     gulp.watch('./src/styles/*.scss', gulp.parallel(styles))
+    gulp.watch('./src/scripts/*.js', gulp.parallel(scripts))
 }
